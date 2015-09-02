@@ -52,11 +52,11 @@ public class MainActivity extends ListActivity {
         List<Map<String, Object>> myData = new ArrayList<>();
 
         // 메뉴 추가 부분
-//        addItem(myData, "TransitionDrawable", TransitionDrawableExamActivity.class);
-        // ----- 메뉴 추가 여기까지
+        addItem(myData, "FrameLayout", FrameLayoutActivity.class);
+                // ----- 메뉴 추가 여기까지
 
-        // 이름 순 정렬
-        Collections.sort(myData, sDisplayNameComparator);
+                // 이름 순 정렬
+                Collections.sort(myData, sDisplayNameComparator);
 
         return myData;
     }
