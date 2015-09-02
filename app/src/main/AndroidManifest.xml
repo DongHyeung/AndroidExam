@@ -20,13 +20,10 @@
             android:name=".FrameLayoutActivity"
             android:label="@string/title_activity_frame_layout" >
         </activity>
-<<<<<<< HEAD
         <activity
             android:name=".mission.Mission01Activity"
             android:label="@string/title_activity_mission01" >
         </activity>
-=======
->>>>>>> 030e20b76b6ca41b10e049697043aab6efca5a5e
     </application>
 
 </manifest>
