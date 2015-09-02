@@ -55,7 +55,10 @@ public class MainActivity extends ListActivity {
 
         // 메뉴 추가 부분
         addItem(myData, "FrameLayout", FrameLayoutActivity.class);
+<<<<<<< HEAD
         addItem(myData, "미션01", Mission01Activity.class);
+=======
+>>>>>>> 030e20b76b6ca41b10e049697043aab6efca5a5e
                 // ----- 메뉴 추가 여기까지
 
                 // 이름 순 정렬
