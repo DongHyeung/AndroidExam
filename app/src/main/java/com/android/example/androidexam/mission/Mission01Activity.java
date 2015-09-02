@@ -1,40 +1,61 @@
 
 package com.android.example.androidexam.mission;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.android.example.androidexam.R;
 
 public class Mission01Activity extends AppCompatActivity {
 
+    private Button mChangeBtn1;
+    private Button mChangeBtn2;
+    private ImageView mImageView1;
+    private ImageView mImageView2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mission01);
+
+        mChangeBtn1 = (Button) findViewById(R.id.btn1);
+        mChangeBtn2 = (Button) findViewById(R.id.btn2);
+        mImageView1 = (ImageView) findViewById(R.id.image1);
+        mImageView2 = (ImageView) findViewById(R.id.image2);
+
+        mChangeBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chageImage1();
+            }
+        });
+
+        mChangeBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chageImage2();
+            }
+        });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_mission01, menu);
-        return true;
-    }
+    public void chageImage1() {
+        if (mImageView2.getVisibility() == View.VISIBLE) {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        // noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            mImageView2.setVisibility(View.INVISIBLE);
+            mImageView1.setVisibility(View.VISIBLE);
         }
 
-        return super.onOptionsItemSelected(item);
+    }
+
+    public void chageImage2() {
+        if (mImageView1.getVisibility() == View.VISIBLE) {
+
+            mImageView1.setVisibility(View.INVISIBLE);
+            mImageView2.setVisibility(View.VISIBLE);
+        }
+
     }
 }

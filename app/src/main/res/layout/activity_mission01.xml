@@ -5,12 +5,19 @@
     tools:context="com.android.example.androidexam.mission.Mission01Activity"
     android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
     <ImageView
         android:id="@+id/image1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:src="@drawable/elsa" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sea"/>
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -23,7 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="▲"
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            android:layout_marginRight="30dp"/>
 
         <Button
             android:id="@+id/btn2"
@@ -34,14 +42,21 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/image2"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1">
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
         android:src="@drawable/sea"/>
 
-
+    </ScrollView>
 
 
 </LinearLayout>
